@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "title": "BannerPlugin",
+      "description": "Add a banner to the top of each generated chunk",
+      "content": [
+        "import webpack from 'webpack';\n",
+        "new webpack.BannerPlugin({",
+        "  banner: 'fullhash:[fullhash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]'",
+        "});"
+      ],
+      "dependencies": [],
+      "devDependencies": [
+        "webpack"
+      ]
+    },
+    {
+      "title": "CommonsChunkPlugin",
+      "description": "Extract common modules shared between chunks",
+      "content": []
+    },
+    {
+      "title": "CompressionWebpackPlugin",
+      "description": "Prepare compressed versions of assets to serve them with Content-Encoding",
+      "content": []
+    }
+  ]
+}

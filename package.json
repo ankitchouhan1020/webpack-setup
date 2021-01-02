@@ -1,0 +1,37 @@
+{
+  "name": "webpack-setup",
+  "version": "1.0.0",
+  "description": "Scalable webpack configs for large projects.",
+  "main": "bin/index.js",
+  "bin": {
+    "webpack-setup": "bin/index.js",
+    "ws": "bin/index.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitchouhan1020/webpack-setup.git"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-config"
+  ],
+  "author": "Ankit Chouhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankitchouhan1020/webpack-setup/issues"
+  },
+  "homepage": "https://github.com/ankitchouhan1020/webpack-setup#readme",
+  "dependencies": {
+    "commander": "^6.2.1",
+    "didyoumean": "^1.2.1",
+    "prompts": "^2.4.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.11.1"
+  }
+}
