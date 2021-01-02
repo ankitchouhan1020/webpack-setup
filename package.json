@@ -1,5 +1,5 @@
 {
-  "name": "webpack-setup",
+  "name": "@ankitchouhan1020/webpack-setup",
   "version": "1.0.0",
   "description": "Scalable webpack configs for large projects.",
   "main": "bin/index.js",
@@ -33,5 +33,8 @@
   },
   "devDependencies": {
     "webpack": "^5.11.1"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
