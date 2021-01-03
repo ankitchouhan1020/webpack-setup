@@ -7,7 +7,7 @@ function getPresetMerge() {
     /** @type {string[]} */
     const mergedPresets = [].concat(...[ presets ]);
     const mergedConfigs = mergedPresets.map(presetName =>
-      require(\`./ presets / webpack.\${ presetName }\`)(env)
+      require(\`./presets/webpack.\${ presetName }\`)(env)
     );
   
     return webpackMerge({}, ...mergedConfigs);
@@ -44,7 +44,12 @@ function getCommonWebpackConfig() {
 }
 
 function getEmptyExportFunc() {
-  return 'module.exports = () => {}'
+  return trim(
+    `
+    /* Write Configuration specific to this file */
+    'module.exports = () => {}'
+    `
+  )
 }
 
 function trim(str) {

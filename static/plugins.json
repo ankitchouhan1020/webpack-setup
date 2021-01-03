@@ -5,8 +5,12 @@
       "description": "Add a banner to the top of each generated chunk",
       "content": [
         "import webpack from 'webpack';\n",
-        "new webpack.BannerPlugin({",
-        "  banner: 'fullhash:[fullhash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]'",
+        "module.exports = () => ({",
+        "  plugins: [",
+        "    new webpack.BannerPlugin({",
+        "      banner: 'fullhash:[fullhash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query],    file:[file]'",
+        "    })",
+        "  ]",
         "});"
       ],
       "dependencies": [],
@@ -17,12 +21,49 @@
     {
       "title": "CommonsChunkPlugin",
       "description": "Extract common modules shared between chunks",
-      "content": []
+      "content": [
+        "import webpack from 'webpack';\n",
+        "module.exports = () => ({",
+        "  plugins: [ new webpack.optimize.CommonsChunkPlugin(/*option*/) ]",
+        "});"
+      ],
+      "dependencies": [],
+      "devDependencies": [
+        "webpack"
+      ]
     },
     {
       "title": "CompressionWebpackPlugin",
       "description": "Prepare compressed versions of assets to serve them with Content-Encoding",
-      "content": []
+      "content": [
+        "const CompressionPlugin = require(\"compression-webpack-plugin\");\n",
+        "module.exports = () => ({",
+        "  plugins: [new CompressionPlugin()]",
+        "});"
+      ],
+      "dependencies": [],
+      "devDependencies": [
+        "compression-webpack-plugin"
+      ]
+    },
+    {
+      "title": "CleanWebpackPlugin",
+      "description": "A webpack plugin to remove/clean your build folder",
+      "content": [
+        "const { CleanWebpackPlugin } = require('clean-webpack-plugin');\n",
+        "module.exports = () => ({",
+        "  plugins: [",
+        "    new CleanWebpackPlugin({",
+        "      cleanOnceBeforeBuildPatterns: [ './build' ],",
+        "      protectWebpackAssets: true",
+        "    })",
+        "  ]",
+        "});"
+      ],
+      "dependencies": [],
+      "devDependencies": [
+        "clean-webpack-plugin"
+      ]
     }
   ]
 }
