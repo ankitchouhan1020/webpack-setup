@@ -47,7 +47,7 @@ function getEmptyExportFunc() {
   return trim(
     `
     /* Write Configuration specific to this file */
-    module.exports = () => {}
+    module.exports = () => ({})
     `
   )
 }
