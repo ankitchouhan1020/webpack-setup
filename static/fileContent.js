@@ -31,7 +31,7 @@ function getCommonWebpackConfig() {
           main: './src/index.js'
         },
         output: {
-          path: path.resolve('./build/client')
+          path: path.resolve('./build')
         },
 
         mode,
@@ -47,7 +47,7 @@ function getEmptyExportFunc() {
   return trim(
     `
     /* Write Configuration specific to this file */
-    'module.exports = () => {}'
+    module.exports = () => {}
     `
   )
 }
